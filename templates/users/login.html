@@ -1,0 +1,16 @@
+{% extends "users/base.html" %}
+
+{% block head_content %}
+<title>Platzigram</title>
+{% endblock %}
+
+
+{% block container %}
+    <form  method="POST" action="{% url 'login' %}">
+        {% csrf_token %} 
+        <input type="text" name="Username" id="" name="username" />
+        <input type="password" name="password" id="">
+        <button type="submit" >Sign in</button>
+    </form>
+
+{% endblock %}
